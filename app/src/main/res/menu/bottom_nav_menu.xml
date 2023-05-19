@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_item"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Bosh oyna"/>
+
+    <item
+        android:id="@+id/buyurtma_item"
+        android:icon="@drawable/baseline_article_24"
+        android:title="Buyurtmalar"/>
+
+    <item
+        android:id="@+id/info_item"
+        android:icon="@drawable/baseline_info_24"
+        android:title="Ilova haqida"/>
+
+</menu>
