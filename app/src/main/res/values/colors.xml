@@ -10,11 +10,11 @@
 
 
     //custom colors
-    <color name="tugma">#40916c</color>
-    <color name="tugma2">#2d6a4f</color>
-    <color name="back1">#edf2f4</color>
-    <color name="back2">#b7e4c7</color>
-    <color name="txt1">#081c15</color>
-    <color name="txt2">#d8f3dc</color>
+    <color name="tugma">#22223b</color>
+    <color name="tugma2">#4a4e69</color>
+    <color name="back1">#c8b6ff</color>
+    <color name="back2">#f2e9e4</color>
+    <color name="txt1">#003049</color>
+    <color name="txt2">#f8edeb</color>
 
 </resources>

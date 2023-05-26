@@ -31,7 +31,7 @@ public class Home_fragment extends Fragment {
 
 
     ArrayList<String> listuser;
-    ArrayList<Orders> orders_list;
+    ArrayList<Books> orders_list;
     String[] name;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -81,7 +81,7 @@ public class Home_fragment extends Fragment {
             orderbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent=new Intent(getActivity(),Make_Order.class);
+                    Intent intent=new Intent(getActivity(), Addbook.class);
                     startActivity(intent);
                 }
             });

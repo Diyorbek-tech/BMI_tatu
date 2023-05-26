@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eaf4f4"
+    android:background="@color/back1"
     tools:context=".Splash_Screen">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -28,7 +28,7 @@
         android:fontFamily="casual"
         android:gravity="center"
         android:padding="8dp"
-        android:text="Buyurtmalar boʻyicha mebel mahsulotlarini tamirlovchi korxona uchun  mobil ilova"
+        android:text="Elektron kutubxona tizimini shakilantirish mobil ilovasi"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:gravity="center"
-        android:text="Rohila Xudayberganova \nTATU_UF"
+        android:text="Sapayev Jurat \nTATU_UF"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="italic"

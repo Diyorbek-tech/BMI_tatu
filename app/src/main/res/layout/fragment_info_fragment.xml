@@ -52,7 +52,7 @@
                             android:layout_marginLeft="20dp"
                             android:fontFamily="serif"
                             android:includeFontPadding="false"
-                            android:text="Baraka"
+                            android:text="E-Kutubxona"
                             android:textAllCaps="true"
                             android:textColor="@color/txt1"
                             android:textSize="26sp"
@@ -63,7 +63,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:includeFontPadding="false"
-                            android:text="''Buyurtmalar boʻyicha mebel mahsulotlarini tamirlovchi korxona uchun  mobil ilovasini ishlab chiqish''  mavzusida tayyorlangan bituruv malakaviy ishi"
+                            android:text="''Elektron kutubxona tizimini shakilantirishda mobil ilovasini ishlab chiqish''  mavzusida tayyorlangan bituruv malakaviy ishi"
                             android:textColor="@color/txt1"
                             android:textSize="12sp"
                             android:textStyle="italic" />
@@ -178,7 +178,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:includeFontPadding="false"
-                            android:text="Rohila Xudayberganova Ulugʻbek qizi"
+                            android:text="Sapayev Jurat"
                             android:textColor="@color/txt1"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -216,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:includeFontPadding="false"
-                        android:text="rohilaxudayberganova@gmail.com"
+                        android:text="sapayevjurat01@gmail.com"
                         android:textColor="@color/txt1"
                         android:textSize="12sp"
                         android:textStyle="italic" />

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -22,12 +23,13 @@ import java.util.ArrayList;
 
 public class Orders_fragment extends Fragment {
 
-    MyOrders_Adapter myadapter_order;
+    MyBooks_Adapter myBooks_adapter;
     RecyclerView recyclerView;
-    DatabaseReference databaseReference;
+    Query databaseReference;
+    SearchView searchView;
 
 
-    ArrayList<Orders> orders_list;
+    ArrayList<Books> books_list;
     String[] name;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -69,32 +71,33 @@ public class Orders_fragment extends Fragment {
         try {
 
 
-            User_info user = new User_info();
 
             recyclerView = v.findViewById(R.id.order_view);
+            searchView = v.findViewById(R.id.search_bar);
+            searchView.setQueryHint("Kitob nomini kiriting...");
 
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
 
-            orders_list = new ArrayList<>();
+            books_list = new ArrayList<>();
 
 
-            myadapter_order = new MyOrders_Adapter(getActivity(), orders_list);
+            myBooks_adapter = new MyBooks_Adapter(getActivity(), books_list);
 
-            recyclerView.setAdapter(myadapter_order);
+            recyclerView.setAdapter(myBooks_adapter);
 
-            databaseReference = FirebaseDatabase.getInstance().getReference("Orders/" + user.getName());
+            databaseReference = FirebaseDatabase.getInstance().getReference("books");
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                        Orders orders = dataSnapshot.getValue(Orders.class);
-                        orders_list.add(orders);
+                        Books books = dataSnapshot.getValue(Books.class);
+                        books_list.add(books);
 
                     }
-                    myadapter_order.notifyDataSetChanged();
+                    myBooks_adapter.notifyDataSetChanged();
 
 
                 }
@@ -104,6 +107,41 @@ public class Orders_fragment extends Fragment {
 
                 }
             });
+
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    databaseReference = FirebaseDatabase.getInstance().getReference("books").orderByChild("title").startAt(s).endAt(s+"\uf8ff");
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            books_list.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                                Books books = dataSnapshot.getValue(Books.class);
+                                books_list.add(books);
+
+                            }
+                            myBooks_adapter.notifyDataSetChanged();
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                    return false;
+                }
+            });
+
 
 
         } catch (Exception e) {

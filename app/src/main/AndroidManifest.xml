@@ -20,13 +20,7 @@
         android:theme="@style/Theme.BMI_tatu"
         tools:targetApi="31">
         <activity
-            android:name=".Admin_User_Data"
-            android:exported="false" />
-        <activity
-            android:name=".Make_Order"
-            android:exported="false" />
-        <activity
-            android:name=".Order_datails"
+            android:name=".Addbook"
             android:exported="false" />
         <activity
             android:name=".Signin"
