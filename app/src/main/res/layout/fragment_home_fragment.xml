@@ -67,6 +67,16 @@
             android:text="Buyurtma berish"
             android:textStyle="bold"
             android:textColor="@color/txt2" />
+        <Button
+            android:id="@+id/ordertamirbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/tugma2"
+            android:text="Tamirlashga buyurtma berish"
+            android:textStyle="bold"
+            android:textColor="@color/txt2" />
     </LinearLayout>
 
 </RelativeLayout>

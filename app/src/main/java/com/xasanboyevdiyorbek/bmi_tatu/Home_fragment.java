@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class Home_fragment extends Fragment {
 
     TextView fullname, emailuser;
-    Button orderbtn;
+    Button orderbtn,ordertamirbtn;
 
 
     DatabaseReference databaseReference;
@@ -76,6 +76,7 @@ public class Home_fragment extends Fragment {
             fullname = v.findViewById(R.id.full_name);
             emailuser = v.findViewById(R.id.emailuser);
             orderbtn = v.findViewById(R.id.orderbtn);
+            ordertamirbtn = v.findViewById(R.id.ordertamirbtn);
 
 
             orderbtn.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +84,14 @@ public class Home_fragment extends Fragment {
                 public void onClick(View view) {
                     Intent intent=new Intent(getActivity(),Make_Order.class);
                     startActivity(intent);
+                }
+            });
+
+            ordertamirbtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i =new Intent(getActivity(),MakeTamirlashOrder.class);
+                    startActivity(i);
                 }
             });
 
