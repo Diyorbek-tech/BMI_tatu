@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/tugma"
         android:gravity="center_horizontal"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +117,35 @@
 
 
         </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/tamirlashgabtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/tugma2"
+                android:text="Tamirlash uchun"
+                android:textColor="@color/txt2"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/yangisiuchunbtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/tugma"
+                android:textColor="@color/txt2"
+                android:text="Yangisi uchun"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
     </LinearLayout>
 
 

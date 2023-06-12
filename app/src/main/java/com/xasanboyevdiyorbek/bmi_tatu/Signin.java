@@ -93,12 +93,14 @@ public class Signin extends AppCompatActivity {
                                 if (snapshot.hasChild(Slogini)) {
 
                                     final String getpassword = snapshot.child(Slogini).child("parol").getValue(String.class);
+                                    final String gettel = snapshot.child(Slogini).child("phone").getValue(String.class);
 
                                     if (getpassword.equals(Sparoli)) {
                                         Toast.makeText(Signin.this, "Muaffaqiyatli amalga oshirildi", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(Signin.this, MainActivity.class);
                                         User_info user_info=new User_info();
                                         user_info.setName(Slogini);
+                                        User_info.setTel(gettel);
                                         startActivity(intent);
                                         finish();
                                     } else {

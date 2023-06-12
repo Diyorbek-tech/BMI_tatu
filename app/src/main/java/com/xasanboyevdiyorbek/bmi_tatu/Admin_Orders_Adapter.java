@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 
 public class Admin_Orders_Adapter extends RecyclerView.Adapter<Admin_Orders_Adapter.MyViewHolder> {
@@ -40,6 +41,8 @@ public class Admin_Orders_Adapter extends RecyclerView.Adapter<Admin_Orders_Adap
 
         holder.product.setText(order.getProduct());
         holder.count.setText(order.getCount());
+        holder.soni.setText("soni:");
+
 
     }
 
@@ -50,7 +53,7 @@ public class Admin_Orders_Adapter extends RecyclerView.Adapter<Admin_Orders_Adap
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView product,count;
+        TextView product,count,soni;
 
 
         public MyViewHolder(View itemview) {
@@ -58,6 +61,7 @@ public class Admin_Orders_Adapter extends RecyclerView.Adapter<Admin_Orders_Adap
 
             product = itemview.findViewById(R.id.ismi);
             count = itemview.findViewById(R.id.email);
+            soni = itemview.findViewById(R.id.sonitxtid);
 
             itemview.setOnClickListener(this);
         }
